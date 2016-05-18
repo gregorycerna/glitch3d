@@ -8,6 +8,9 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
+router.get('/glitch3d', function(req, res, next) {
+  res.render('index');
+});
 
 router.post('/', function (req, res, next) {
   console.log("I made it!");
