@@ -116,11 +116,12 @@ function createGui() {
 
   //sinFolder.open();*/
 
-  twistFolder.add(guiControls, 'newTwistGlitch').name("Add Twist Glitch");
+
   twistFolder.add(guiControls, 'twistAxis', twistAxis);
+  twistFolder.add(guiControls, 'newTwistGlitch').name("Add Twist Glitch");
   twistFolder.open();
 
-  sinFolder.add(guiControls, 'newSinGlitch').name("Add Sin Glitch");
+
   sinFolder.add(guiControls, 'sinAxis', sinAxis);
   sinFolder.add(guiControls, 'sinType', sinType).onChange(function(value) {
     if(value == 'translate')
@@ -128,6 +129,7 @@ function createGui() {
     else
       sinFolder.remove(axis2);
   });
+  sinFolder.add(guiControls, 'newSinGlitch').name("Add Sin Glitch");
   sinFolder.open();
   glitchFolder.open();
 };
